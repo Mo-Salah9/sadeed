@@ -1,0 +1,228 @@
+{
+  "meta": {
+    "siteName": "Sadeed Studio",
+    "title": "Sadeed Studio: Immersive Learning",
+    "description": "Sadeed Studio is an Amman-based studio building VR experiences, XR/AR learning apps, educational games and training simulations for schools, universities, government and enterprise.",
+    "ogAlt": "Sadeed Studio: Immersive Learning",
+    "contactTitle": "Contact Us | Sadeed Studio",
+    "contactDescription": "Talk to Sadeed Studio about VR, XR/AR, educational games or training simulations for your institution. Request a demo today."
+  },
+  "nav": {
+    "skipToContent": "Skip to main content",
+    "home": "Sadeed Studio home",
+    "primary": "Primary navigation",
+    "about": "About",
+    "services": "Services",
+    "why": "Why Immersive",
+    "process": "Process",
+    "portfolio": "Portfolio",
+    "sectors": "Sectors",
+    "contact": "Contact",
+    "contactUs": "Contact Us",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "switchLanguage": "التبديل إلى العربية",
+    "otherLanguage": "العربية",
+    "otherLanguageShort": "AR"
+  },
+  "hero": {
+    "eyebrow": "VR · XR · Educational Games",
+    "titleStart": "Learning you can",
+    "titleHighlight": "step inside",
+    "tagline": "Sadeed Studio: Immersive Learning",
+    "description": "We design and build immersive educational experiences that help students understand faster, trainees practise safely, and institutions measure real progress.",
+    "ctaServices": "Our Services",
+    "ctaDemo": "Request a Demo",
+    "trust": "Built for schools, universities and training centres across Jordan and the region",
+    "visualAlt": "Abstract low-poly illustration of a VR headset"
+  },
+  "about": {
+    "eyebrow": "Who we are",
+    "title": "An immersive learning studio from Amman",
+    "body1": "Sadeed Studio is a team of educators, 3D artists and Unity engineers based in Amman, Jordan. We turn curricula, procedures and complex concepts into interactive experiences that learners can see, touch and explore.",
+    "body2": "We work closely with teachers, subject-matter experts and decision-makers, so every experience is pedagogically sound, culturally relevant, fully bilingual and built to run on the hardware you already have.",
+    "missionTitle": "Our mission",
+    "mission": "To make high-quality immersive learning accessible to every classroom and training centre in the Arab world.",
+    "visionTitle": "Our approach",
+    "vision": "Learning outcomes first, technology second. We measure success by what learners can do afterwards.",
+    "locationLabel": "Based in",
+    "location": "Amman, Jordan",
+    "highlights": {
+      "bilingual": "Arabic & English by default",
+      "curriculum": "Curriculum-aligned content",
+      "devices": "Runs on headsets, tablets & web"
+    }
+  },
+  "services": {
+    "eyebrow": "What we do",
+    "title": "Services",
+    "subtitle": "End-to-end immersive solutions, from the first idea to deployment in your classrooms and training rooms.",
+    "items": {
+      "vr": {
+        "title": "VR Educational Experiences",
+        "description": "Fully immersive virtual labs, field trips and lessons for standalone headsets like Meta Quest and Pico."
+      },
+      "xr": {
+        "title": "XR / AR Learning Apps",
+        "description": "Augmented reality apps that bring textbooks, models and equipment to life on phones and tablets."
+      },
+      "games": {
+        "title": "Educational Games",
+        "description": "Game-based learning for web and mobile that turns practice into play, with progress tracking built in."
+      },
+      "simulations": {
+        "title": "Training Simulations",
+        "description": "Realistic medical, technical and safety simulations so trainees can practise high-risk procedures without the risk."
+      }
+    }
+  },
+  "why": {
+    "eyebrow": "Why immersive learning",
+    "title": "Learning by doing, not just watching",
+    "subtitle": "Immersive learning puts students inside the lesson. That changes how much they remember and how ready they feel.",
+    "items": {
+      "retention": {
+        "value": "4×",
+        "label": "Faster to train",
+        "description": "Learners complete hands-on modules faster than with classroom instruction alone."
+      },
+      "engagement": {
+        "value": "+275%",
+        "label": "More confident",
+        "description": "Learners feel more confident applying what they practised in a realistic environment."
+      },
+      "safe": {
+        "value": "0",
+        "label": "Real-world risk",
+        "description": "Practise dangerous or expensive procedures as often as needed, with no harm to people or equipment."
+      },
+      "focus": {
+        "value": "4×",
+        "label": "More focused",
+        "description": "Headsets remove distractions, so learners stay on task far longer than on a laptop screen."
+      }
+    },
+    "note": "Figures from PwC, \"The Effectiveness of Virtual Reality Soft Skills Training in the Enterprise\" (2020), compared with classroom learners. Results vary by context and program design."
+  },
+  "process": {
+    "eyebrow": "How we work",
+    "title": "Our process",
+    "subtitle": "A clear, collaborative path from idea to impact.",
+    "steps": {
+      "discover": {
+        "title": "Discover",
+        "description": "We meet your educators and experts to define learning outcomes, audience, hardware and success metrics."
+      },
+      "design": {
+        "title": "Design",
+        "description": "Storyboards, interaction design and prototypes, reviewed with you before a single line of production code."
+      },
+      "develop": {
+        "title": "Develop (Unity)",
+        "description": "We build in Unity with 3D art, Arabic and English content, and regular playable builds for your feedback."
+      },
+      "deploy": {
+        "title": "Deploy & Support",
+        "description": "Installation, teacher training, analytics and ongoing updates so the experience keeps delivering value."
+      }
+    }
+  },
+  "portfolio": {
+    "eyebrow": "Selected work",
+    "title": "Portfolio",
+    "subtitle": "A sample of experiences we have designed and built for learners of all ages.",
+    "all": "All",
+    "filterLabel": "Filter projects by category",
+    "categories": {
+      "vr": "VR",
+      "ar": "AR",
+      "game": "Game",
+      "simulation": "Simulation"
+    }
+  },
+  "sectors": {
+    "eyebrow": "Who we serve",
+    "title": "Sectors we serve",
+    "subtitle": "We tailor every experience to the goals, budgets and procurement needs of each sector.",
+    "items": {
+      "schools": {
+        "title": "Schools",
+        "description": "Curriculum-aligned VR and AR lessons in science, geography and history."
+      },
+      "universities": {
+        "title": "Universities",
+        "description": "Virtual labs and simulations for medicine, engineering and applied sciences."
+      },
+      "government": {
+        "title": "Government",
+        "description": "National-scale education and awareness programs for ministries and public bodies."
+      },
+      "corporate": {
+        "title": "Corporate Training",
+        "description": "Onboarding, safety and technical skills training that scales across teams."
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Get in touch",
+    "title": "Let's build something learners remember",
+    "subtitle": "Tell us about your project or request a live demo. We usually reply within one business day.",
+    "form": {
+      "name": "Full name",
+      "namePlaceholder": "e.g. Lina Haddad",
+      "email": "Email",
+      "emailPlaceholder": "you@organization.com",
+      "organization": "Organization",
+      "organizationPlaceholder": "School, university or company",
+      "service": "Service of interest",
+      "servicePlaceholder": "Select a service",
+      "services": {
+        "vr": "VR Educational Experiences",
+        "xr": "XR / AR Learning Apps",
+        "games": "Educational Games",
+        "simulations": "Training Simulations",
+        "demo": "Request a demo",
+        "other": "Something else"
+      },
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your learners, goals and timeline…",
+      "optional": "(optional)",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "success": "Thank you! Your message has been sent. We'll be in touch shortly.",
+      "error": "Something went wrong. Please try again or email us directly.",
+      "rateLimited": "Too many requests. Please wait a moment and try again.",
+      "honeypot": "Leave this field empty"
+    },
+    "validation": {
+      "nameRequired": "Please enter your name.",
+      "nameTooLong": "Name is too long.",
+      "emailInvalid": "Please enter a valid email address.",
+      "organizationTooLong": "Organization name is too long.",
+      "serviceRequired": "Please select a service.",
+      "messageTooShort": "Please write at least 10 characters.",
+      "messageTooLong": "Message is too long (max 3000 characters)."
+    },
+    "info": {
+      "title": "Contact details",
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location",
+      "locationValue": "Amman, Jordan",
+      "social": "Follow us"
+    }
+  },
+  "footer": {
+    "tagline": "Immersive learning experiences designed and built in Amman, Jordan.",
+    "explore": "Explore",
+    "services": "Services",
+    "contact": "Contact",
+    "rights": "© {year} Sadeed Studio. All rights reserved.",
+    "backToTop": "Back to top"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you are looking for doesn't exist or has been moved.",
+    "back": "Back to home"
+  }
+}
