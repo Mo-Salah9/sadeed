@@ -20,14 +20,15 @@ export function Hero() {
         <div className="bg-grid absolute inset-0 [mask-image:radial-gradient(ellipse_70%_60%_at_50%_40%,black,transparent)]" />
         <div className="animate-drift absolute -top-48 -end-24 h-[34rem] w-[34rem] rounded-full bg-primary/25 blur-[120px]" />
         <div className="animate-drift-slow absolute top-[22rem] -start-40 h-[30rem] w-[30rem] rounded-full bg-secondary/25 blur-[120px]" />
-        <div className="animate-drift absolute top-[36rem] end-1/4 h-72 w-72 rounded-full bg-pink/15 blur-[100px]" />
+        <div className="animate-drift absolute top-[36rem] end-1/4 h-72 w-72 rounded-full bg-pink/20 blur-[100px]" />
+        <div className="animate-drift-slow absolute top-24 end-[38%] h-56 w-56 rounded-full bg-orange/15 blur-[100px]" />
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-bg" />
       </div>
 
       <Container className="grid items-center gap-8 pt-28 pb-10 sm:pt-32 sm:pb-20 lg:min-h-[min(100vh,58rem)] lg:grid-cols-[1.25fr_1fr] lg:gap-4 lg:pt-24 lg:pb-16">
         <div className="text-center lg:text-start">
           <p className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/50 px-4 py-1.5 text-sm font-medium text-text-secondary backdrop-blur">
-            <span className="h-2 w-2 rounded-full bg-gradient-immersive" aria-hidden="true" />
+            <span className="h-2 w-2 rounded-full bg-gradient-logo" aria-hidden="true" />
             {t("eyebrow")}
           </p>
 
@@ -35,10 +36,10 @@ export function Hero() {
             id="hero-title"
             className="mt-6 text-[2.5rem] leading-[1.12] font-extrabold tracking-tight text-balance text-white sm:text-5xl lg:text-[3.5rem] xl:text-[4rem]"
           >
-            {t("titleStart")} <span className="text-gradient-immersive">{t("titleHighlight")}</span>
+            {t("titleStart")} <span className="text-gradient-logo">{t("titleHighlight")}</span>
           </h1>
 
-          <p className="mt-5 text-lg font-semibold text-primary sm:text-xl">{t("tagline")}</p>
+          <p className="mt-5 text-lg font-semibold text-[#38bdf8] sm:text-xl">{t("tagline")}</p>
           <p className="mx-auto mt-4 max-w-xl text-base text-text-secondary sm:text-lg lg:mx-0">{t("description")}</p>
 
           <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">

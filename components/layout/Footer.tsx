@@ -20,7 +20,7 @@ export function Footer() {
 
   return (
     <footer className="relative border-t border-border/60 bg-bg">
-      <div aria-hidden="true" className="absolute inset-x-0 top-0 h-px bg-gradient-immersive opacity-60" />
+      <div aria-hidden="true" className="absolute inset-x-0 top-0 h-1 bg-gradient-logo rtl:-scale-x-100" />
       <Container className="grid gap-10 py-16 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
         <div className="space-y-5">
           <Link href="/" className="inline-block rounded-lg">

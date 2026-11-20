@@ -16,7 +16,7 @@ export function About() {
         <Reveal className="relative order-last lg:order-first">
           <div
             aria-hidden="true"
-            className="absolute -inset-6 -z-0 rounded-[2rem] bg-gradient-immersive opacity-20 blur-3xl"
+            className="absolute -inset-6 -z-0 rounded-[2rem] bg-gradient-logo opacity-25 blur-3xl"
           />
           <div className="relative aspect-[6/5] overflow-hidden rounded-[var(--radius-card)] border border-border shadow-card">
             <Image src="/placeholders/about.webp" alt="" fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" />
@@ -42,7 +42,7 @@ export function About() {
           <ul className="mt-7 flex flex-wrap gap-x-6 gap-y-3">
             {highlightKeys.map((key) => (
               <li key={key} className="flex items-center gap-2 text-sm font-medium text-white">
-                <CircleCheck className="h-5 w-5 shrink-0 text-teal-soft" aria-hidden="true" />
+                <CircleCheck className="h-5 w-5 shrink-0 text-[#fbbf24]" aria-hidden="true" />
                 {t(`highlights.${key}`)}
               </li>
             ))}
@@ -55,7 +55,7 @@ export function About() {
               <p className="mt-2 text-sm text-text-muted">{t("mission")}</p>
             </div>
             <div className="border-gradient rounded-[var(--radius-card)] p-6">
-              <Compass className="h-6 w-6 text-secondary-soft" aria-hidden="true" />
+              <Compass className="h-6 w-6 text-[#f472b6]" aria-hidden="true" />
               <h3 className="mt-4 text-lg font-bold text-white">{t("approachTitle")}</h3>
               <p className="mt-2 text-sm text-text-muted">{t("approach")}</p>
             </div>

@@ -25,8 +25,9 @@ export function Contact({ headingLevel = "h2" }: { headingLevel?: "h1" | "h2" })
       className="relative isolate overflow-hidden bg-gradient-dark py-24 sm:py-32"
     >
       <div aria-hidden="true" className="bg-grid absolute inset-0 -z-10 opacity-50" />
+      <div aria-hidden="true" className="absolute top-1/3 end-1/4 -z-10 h-72 w-72 rounded-full bg-orange/10 blur-[110px]" />
       <div aria-hidden="true" className="absolute -top-40 -start-40 -z-10 h-[28rem] w-[28rem] rounded-full bg-primary/20 blur-[120px]" />
-      <div aria-hidden="true" className="absolute -bottom-40 -end-40 -z-10 h-[28rem] w-[28rem] rounded-full bg-secondary/20 blur-[120px]" />
+      <div aria-hidden="true" className="absolute -bottom-40 -end-40 -z-10 h-[28rem] w-[28rem] rounded-full bg-pink/15 blur-[120px]" />
 
       <Container className="grid gap-12 lg:grid-cols-5 lg:gap-16">
         <div className="lg:col-span-2">

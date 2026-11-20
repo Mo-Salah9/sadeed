@@ -28,11 +28,12 @@ export function Portfolio() {
     <section
       id="portfolio"
       aria-labelledby="portfolio-title"
-      className="relative isolate overflow-hidden bg-bg-raised/40 py-24 sm:py-32"
+      className="relative isolate overflow-hidden bg-surface-light py-24 sm:py-32"
     >
-      <div aria-hidden="true" className="absolute -top-40 start-1/4 -z-10 h-96 w-96 rounded-full bg-primary/10 blur-[120px]" />
+      <div aria-hidden="true" className="absolute -top-40 start-1/4 -z-10 h-96 w-96 rounded-full bg-secondary/10 blur-[120px]" />
+      <div aria-hidden="true" className="absolute top-1/3 end-[5%] -z-10 h-80 w-80 rounded-full bg-orange/10 blur-[100px]" />
       <Container>
-        <SectionHeading id="portfolio-title" eyebrow={t("eyebrow")} title={t("title")} subtitle={t("subtitle")} />
+        <SectionHeading id="portfolio-title" tone="light" eyebrow={t("eyebrow")} title={t("title")} subtitle={t("subtitle")} />
         <PortfolioGrid
           items={items}
           filterLabel={t("filterLabel")}

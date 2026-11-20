@@ -18,11 +18,11 @@ export type PortfolioItem = {
 type Filter = { id: "all" | ProjectCategory; label: string };
 
 /** Technology label colors follow the service identities in the brand guide. */
-const categoryStyle: Record<ProjectCategory, { badge: string; hover: string }> = {
-  vr: { badge: "bg-primary/15 text-primary ring-primary/30", hover: "hover:border-primary/50" },
-  ar: { badge: "bg-secondary/15 text-secondary-soft ring-secondary/30", hover: "hover:border-secondary/50" },
-  game: { badge: "bg-orange/15 text-orange ring-orange/30", hover: "hover:border-orange/50" },
-  simulation: { badge: "bg-teal/15 text-teal-soft ring-teal/30", hover: "hover:border-teal/50" },
+const categoryStyle: Record<ProjectCategory, { badge: string; bar: string; tag: string }> = {
+  vr: { badge: "bg-white/95 text-blue-ink", bar: "from-cyan to-primary", tag: "bg-primary/10 text-blue-ink" },
+  ar: { badge: "bg-white/95 text-purple-ink", bar: "from-secondary to-teal", tag: "bg-secondary/10 text-purple-ink" },
+  game: { badge: "bg-white/95 text-pink-ink", bar: "from-orange to-pink", tag: "bg-pink/10 text-pink-ink" },
+  simulation: { badge: "bg-white/95 text-teal-ink", bar: "from-teal to-primary", tag: "bg-teal/10 text-teal-ink" },
 };
 
 export function PortfolioGrid({
@@ -50,7 +50,7 @@ export function PortfolioGrid({
             className={`h-11 rounded-[var(--radius-button)] px-5 text-sm font-semibold transition-all duration-200 ${
               active === f.id
                 ? "bg-gradient-button text-white shadow-glow-blue"
-                : "border border-border bg-surface/40 text-text-secondary hover:border-primary/60 hover:text-white"
+                : "border border-line bg-white text-ink-secondary shadow-soft hover:-translate-y-0.5 hover:border-primary/50 hover:text-ink"
             }`}
           >
             {f.label}
@@ -71,9 +71,7 @@ export function PortfolioGrid({
                 exit={reduce ? undefined : { opacity: 0, scale: 0.96 }}
                 transition={{ duration: 0.25 }}
               >
-                <article
-                  className={`group flex h-full flex-col overflow-hidden rounded-[var(--radius-card)] border border-border bg-surface/60 shadow-card transition-all duration-300 hover:-translate-y-1.5 ${style.hover}`}
-                >
+                <article className="group flex h-full flex-col overflow-hidden rounded-[var(--radius-card)] border border-line bg-white shadow-soft transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lift">
                   <div className="relative aspect-[3/2] overflow-hidden">
                     <Image
                       src={p.image}
@@ -83,20 +81,18 @@ export function PortfolioGrid({
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <span
-                      className={`absolute top-4 start-4 rounded-full px-3 py-1 text-xs font-semibold ring-1 backdrop-blur-md ${style.badge}`}
+                      className={`absolute top-4 start-4 rounded-full px-3 py-1 text-xs font-bold shadow-sm ${style.badge}`}
                     >
                       {p.categoryLabel}
                     </span>
+                    <div aria-hidden="true" className={`absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r ${style.bar}`} />
                   </div>
                   <div className="flex flex-1 flex-col p-6">
-                    <h3 className="text-xl font-bold text-white">{p.title}</h3>
-                    <p className="mt-2 flex-1 text-sm text-text-muted">{p.description}</p>
+                    <h3 className="text-xl font-bold text-ink">{p.title}</h3>
+                    <p className="mt-2 flex-1 text-sm text-ink-muted">{p.description}</p>
                     <ul className="mt-5 flex flex-wrap gap-2">
                       {p.tags.map((tag) => (
-                        <li
-                          key={tag}
-                          className="rounded-lg border border-border bg-bg/60 px-2.5 py-1 text-xs font-medium text-text-secondary"
-                        >
+                        <li key={tag} className={`rounded-lg px-2.5 py-1 text-xs font-semibold ${style.tag}`}>
                           {tag}
                         </li>
                       ))}

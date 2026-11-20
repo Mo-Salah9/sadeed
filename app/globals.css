@@ -23,10 +23,22 @@
   --color-surface-light: #f1f5f9;
   --color-border: #334155;
 
-  /* Text */
+  /* Text on dark */
   --color-text: #ffffff;
   --color-text-secondary: #cbd5e1;
   --color-text-muted: #94a3b8;
+
+  /* Light sections: text + accessible "ink" shades of the logo colors (all ≥4.5:1 on white/#F1F5F9) */
+  --color-ink: #0b1023;
+  --color-ink-secondary: #334155;
+  --color-ink-muted: #475569;
+  --color-line: #e2e8f0;
+  --color-cyan: #22d3ee;
+  --color-blue-ink: #0369a1;
+  --color-purple-ink: #6d28d9;
+  --color-pink-ink: #be185d;
+  --color-orange-ink: #92400e;
+  --color-teal-ink: #0f766e;
 
   --font-sans: var(--font-body);
 
@@ -37,6 +49,8 @@
   --shadow-glow-blue: 0 10px 40px -12px rgb(14 165 233 / 0.55);
   --shadow-glow-purple: 0 10px 40px -12px rgb(139 92 246 / 0.55);
   --shadow-glow-orange: 0 10px 40px -12px rgb(245 158 11 / 0.5);
+  --shadow-soft: 0 1px 2px rgb(15 23 42 / 0.04), 0 12px 32px -12px rgb(15 23 42 / 0.12);
+  --shadow-lift: 0 2px 4px rgb(15 23 42 / 0.04), 0 24px 48px -16px rgb(15 23 42 / 0.2);
 
   --animate-drift: drift 18s ease-in-out infinite alternate;
   --animate-drift-slow: drift 26s ease-in-out infinite alternate-reverse;
@@ -134,6 +148,16 @@ section[id] {
 }
 @utility bg-gradient-dark {
   background-image: linear-gradient(135deg, #0b1023, #111b38, #1e1b4b);
+}
+/* Full logo spectrum: cyan → blue → purple → pink → orange */
+@utility bg-gradient-logo {
+  background-image: linear-gradient(100deg, #22d3ee 0%, #0ea5e9 22%, #8b5cf6 50%, #ec4899 76%, #f59e0b 100%);
+}
+@utility text-gradient-logo {
+  background-image: linear-gradient(100deg, #22d3ee 0%, #38bdf8 22%, #a78bfa 50%, #f472b6 76%, #fbbf24 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 /* Primary gradient with darker stops so white button text meets WCAG AA (≥4.5:1) */
 @utility bg-gradient-button {
