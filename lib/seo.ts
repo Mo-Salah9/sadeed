@@ -35,7 +35,7 @@ export function buildMetadata({
   absoluteTitle?: boolean;
 }): Metadata {
   const url = localizedUrl(locale, path);
-  const image = { url: `/og/og-${locale}.png`, width: 1200, height: 630, alt: ogAlt };
+  const image = { url: `/og/og-${locale}.jpg`, width: 1200, height: 630, alt: ogAlt };
 
   return {
     metadataBase: new URL(siteConfig.url),

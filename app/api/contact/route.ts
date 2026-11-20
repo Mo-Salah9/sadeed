@@ -32,13 +32,13 @@ function renderEmail(d: ContactData, locale: string) {
   ];
   const text = `${rows.map(([k, v]) => `${k}: ${v}`).join("\n")}\n\nMessage:\n${d.message}`;
   const html = `
-    <div style="font-family:Arial,sans-serif;color:#0B1E3F;max-width:600px">
-      <h2 style="margin:0 0 16px">New enquiry from sadeed website</h2>
+    <div style="font-family:Arial,sans-serif;color:#0B1023;max-width:600px">
+      <h2 style="margin:0 0 16px">New enquiry from the SADEED website</h2>
       <table cellpadding="6" style="border-collapse:collapse">
-        ${rows.map(([k, v]) => `<tr><td style="color:#4a5a75">${k}</td><td><strong>${escapeHtml(v)}</strong></td></tr>`).join("")}
+        ${rows.map(([k, v]) => `<tr><td style="color:#475569">${k}</td><td><strong>${escapeHtml(v)}</strong></td></tr>`).join("")}
       </table>
-      <p style="margin:20px 0 6px;color:#4a5a75">Message</p>
-      <div style="white-space:pre-wrap;border-inline-start:3px solid #00C2CB;padding:8px 12px;background:#f5f7fa">${escapeHtml(d.message)}</div>
+      <p style="margin:20px 0 6px;color:#475569">Message</p>
+      <div style="white-space:pre-wrap;border-inline-start:3px solid #8B5CF6;padding:8px 12px;background:#F1F5F9">${escapeHtml(d.message)}</div>
     </div>`;
   return { text, html };
 }
@@ -70,7 +70,7 @@ export async function POST(request: Request) {
 
   const apiKey = process.env.RESEND_API_KEY;
   const to = process.env.CONTACT_EMAIL;
-  const from = process.env.CONTACT_FROM_EMAIL || "Sadeed Studio Website <onboarding@resend.dev>";
+  const from = process.env.CONTACT_FROM_EMAIL || "SADEED Website <onboarding@resend.dev>";
   const { text, html } = renderEmail(parsed.data, locale);
 
   if (!apiKey || !to) {

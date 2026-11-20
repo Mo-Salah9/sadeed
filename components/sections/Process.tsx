@@ -15,7 +15,7 @@ export function Process() {
   const t = useTranslations("process");
 
   return (
-    <section id="process" aria-labelledby="process-title" className="bg-white py-20 sm:py-28">
+    <section id="process" aria-labelledby="process-title" className="bg-bg py-24 sm:py-32">
       <Container>
         <SectionHeading id="process-title" eyebrow={t("eyebrow")} title={t("title")} subtitle={t("subtitle")} />
 
@@ -23,23 +23,21 @@ export function Process() {
           {/* Connector line (desktop) */}
           <div
             aria-hidden="true"
-            className="absolute inset-x-[12.5%] top-8 hidden h-0.5 bg-gradient-to-r from-teal-500/10 via-teal-500/60 to-teal-500/10 lg:block"
+            className="absolute inset-x-[12.5%] top-8 hidden h-px bg-gradient-immersive opacity-60 lg:block"
           />
-          <ol className="relative grid gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-6">
-          {steps.map(({ key, Icon }, i) => (
-            <Reveal as="li" key={key} delay={i * 0.1} className="relative text-center">
-              <div className="relative mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-navy-900 text-teal-400 shadow-card ring-8 ring-white">
-                <Icon className="h-7 w-7" aria-hidden="true" />
-                <span className="absolute -top-2 -end-2 flex h-7 w-7 items-center justify-center rounded-full bg-teal-500 text-xs font-bold text-navy-900">
-                  {i + 1}
-                </span>
-              </div>
-              <h3 className="mt-6 text-lg font-semibold text-navy-900">{t(`steps.${key}.title`)}</h3>
-              <p className="mx-auto mt-2 max-w-xs text-sm leading-relaxed text-muted">
-                {t(`steps.${key}.description`)}
-              </p>
-            </Reveal>
-          ))}
+          <ol className="relative grid gap-12 md:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+            {steps.map(({ key, Icon }, i) => (
+              <Reveal as="li" key={key} delay={i * 0.1} className="relative text-center">
+                <div className="relative mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-border bg-surface text-primary shadow-card ring-8 ring-bg">
+                  <Icon className="h-7 w-7" aria-hidden="true" />
+                  <span className="absolute -top-2.5 -end-2.5 flex h-7 w-7 items-center justify-center rounded-full bg-gradient-button text-xs font-bold text-white">
+                    {i + 1}
+                  </span>
+                </div>
+                <h3 className="mt-6 text-xl font-bold text-white">{t(`steps.${key}.title`)}</h3>
+                <p className="mx-auto mt-3 max-w-xs text-sm text-text-muted">{t(`steps.${key}.description`)}</p>
+              </Reveal>
+            ))}
           </ol>
         </div>
       </Container>

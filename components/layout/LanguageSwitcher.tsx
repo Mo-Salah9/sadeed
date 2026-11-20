@@ -27,7 +27,7 @@ export function LanguageSwitcher({ className = "", onSwitch }: { className?: str
           router.replace(`${pathname}#${hash}`, { locale: other, scroll: false });
         }
       }}
-      className={`inline-flex h-10 items-center gap-1.5 rounded-full border border-white/20 px-3.5 text-sm font-medium text-white transition hover:border-teal-400 hover:text-teal-300 ${className}`}
+      className={`inline-flex h-11 items-center gap-1.5 rounded-[var(--radius-button)] border border-border bg-surface/40 px-3.5 text-sm font-medium text-text-secondary transition hover:border-primary/70 hover:text-white ${className}`}
     >
       <Globe className="h-4 w-4" aria-hidden="true" />
       <span className="sm:hidden" aria-hidden="true">

@@ -4,8 +4,8 @@
  */
 export const siteConfig = {
   // Set NEXT_PUBLIC_SITE_URL in production (used for canonical URLs, OG tags, sitemap).
-  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://sadeed.studio").replace(/\/$/, ""),
-  email: "hello@sadeed.studio",
+  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.sadeedstudio.com").replace(/\/$/, ""),
+  email: "hello@sadeedstudio.com",
   phoneDisplay: "+962 6 000 0000",
   phoneHref: "+96260000000",
   socials: [
@@ -18,6 +18,10 @@ export const siteConfig = {
 
 export type SocialId = (typeof siteConfig.socials)[number]["id"];
 
-/** In-page sections, in display order. Keys map to `nav.*` messages. */
-export const sectionIds = ["about", "services", "why", "process", "portfolio", "sectors", "contact"] as const;
+/** In-page section anchors. */
+export const sectionIds = ["solutions", "why", "portfolio", "process", "about", "sectors", "contact"] as const;
 export type SectionId = (typeof sectionIds)[number];
+
+/** Primary navigation (keys map to `nav.*` messages; `home` scrolls to the top). */
+export const navItems = ["home", "about", "solutions", "portfolio"] as const;
+export type NavItem = (typeof navItems)[number];

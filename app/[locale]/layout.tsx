@@ -5,7 +5,7 @@ import { getMessages, getTranslations, setRequestLocale } from "next-intl/server
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
 import { routing, localeDirection } from "@/i18n/routing";
-import { inter, plexArabic } from "@/lib/fonts";
+import { fontVariables } from "@/lib/fonts";
 import { buildMetadata } from "@/lib/seo";
 
 export function generateStaticParams() {
@@ -13,8 +13,8 @@ export function generateStaticParams() {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#0B1E3F",
-  colorScheme: "light",
+  themeColor: "#0B1023",
+  colorScheme: "dark",
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -47,7 +47,6 @@ export default async function LocaleLayout({
 
   setRequestLocale(locale);
   const t = await getTranslations("nav");
-  const meta = await getTranslations("meta");
 
   // Only ship the namespaces that client components need
   const { nav, contact } = await getMessages();
@@ -56,17 +55,17 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       dir={localeDirection[locale]}
-      className={`${inter.variable} ${plexArabic.variable}`}
+      className={fontVariables}
     >
       <body id="top">
         <NextIntlClientProvider messages={{ nav, contact }}>
           <a
             href="#main"
-            className="sr-only focus:not-sr-only focus:fixed focus:start-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-teal-500 focus:px-4 focus:py-2 focus:font-semibold focus:text-navy-900"
+            className="sr-only focus:not-sr-only focus:fixed focus:start-4 focus:top-4 focus:z-[60] focus:rounded-xl focus:bg-gradient-button focus:px-4 focus:py-2 focus:font-semibold focus:text-white"
           >
             {t("skipToContent")}
           </a>
-          <Navbar siteName={meta("siteName")} />
+          <Navbar />
           <main id="main" tabIndex={-1} className="outline-none">
             {children}
           </main>

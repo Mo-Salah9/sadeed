@@ -31,7 +31,7 @@ function ServiceFromQuery({ setValue }: { setValue: UseFormSetValue<ContactInput
 }
 
 const inputBase =
-  "block w-full rounded-xl border bg-white px-4 py-3 text-navy-900 placeholder:text-muted/60 transition focus:outline-none focus:ring-2 focus:ring-teal-500/40";
+  "block w-full rounded-[var(--radius-button)] border bg-bg/70 px-4 py-3 text-white placeholder:text-text-muted/70 transition duration-200 focus:outline-none focus:ring-2 focus:ring-primary/40";
 
 export function ContactForm() {
   const t = useTranslations("contact.form");
@@ -77,16 +77,16 @@ export function ContactForm() {
     "aria-describedby": errors[name] ? `${fieldId(name)}-error` : undefined,
   });
   const border = (name: keyof ContactInput) =>
-    errors[name] ? "border-red-500" : "border-navy-900/15 hover:border-navy-900/30 focus:border-teal-500";
+    errors[name] ? "border-red-400" : "border-border hover:border-text-muted/60 focus:border-primary";
 
   const fieldError = (name: keyof ContactInput) =>
     errors[name] ? (
-      <p id={`${fieldId(name)}-error`} className="mt-1.5 text-sm text-red-600">
+      <p id={`${fieldId(name)}-error`} className="mt-1.5 text-sm text-red-400">
         {errorMessage(errors[name]?.message)}
       </p>
     ) : null;
 
-  const labelClass = "mb-1.5 block text-sm font-medium text-navy-900";
+  const labelClass = "mb-2 block text-sm font-medium text-text-secondary";
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} noValidate className="relative space-y-5">
@@ -130,7 +130,7 @@ export function ContactForm() {
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor={fieldId("organization")} className={labelClass}>
-            {t("organization")} <span className="font-normal text-muted">{t("optional")}</span>
+            {t("organization")} <span className="font-normal text-text-muted">{t("optional")}</span>
           </label>
           <input
             type="text"
@@ -148,10 +148,10 @@ export function ContactForm() {
           </label>
           <select
             defaultValue=""
-            className={`${inputBase} ${border("service")} appearance-none bg-[length:1.1rem] bg-[position:right_1rem_center] bg-no-repeat pe-10 rtl:bg-[position:left_1rem_center]`}
+            className={`${inputBase} ${border("service")} appearance-none bg-[length:1.1rem] [&>option]:bg-surface [&>option]:text-white bg-[position:right_1rem_center] bg-no-repeat pe-10 rtl:bg-[position:left_1rem_center]`}
             style={{
               backgroundImage:
-                "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234a5a75' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E\")",
+                "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E\")",
             }}
             {...a11y("service")}
             {...register("service")}
@@ -206,13 +206,13 @@ export function ContactForm() {
 
         <div role="status" aria-live="polite" className="text-sm">
           {status === "success" && (
-            <p className="flex items-start gap-2 text-teal-800">
+            <p className="flex items-start gap-2 text-teal-soft">
               <CircleCheck className="mt-0.5 h-5 w-5 shrink-0" aria-hidden="true" />
               {t("success")}
             </p>
           )}
           {(status === "error" || status === "rateLimited") && (
-            <p className="flex items-start gap-2 text-red-600">
+            <p className="flex items-start gap-2 text-red-400">
               <CircleAlert className="mt-0.5 h-5 w-5 shrink-0" aria-hidden="true" />
               {status === "rateLimited" ? t("rateLimited") : t("error")}
             </p>

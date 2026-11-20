@@ -4,11 +4,11 @@ import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
-const items: { key: "retention" | "engagement" | "safe" | "focus"; Icon: LucideIcon }[] = [
-  { key: "retention", Icon: Gauge },
-  { key: "engagement", Icon: TrendingUp },
-  { key: "safe", Icon: ShieldCheck },
-  { key: "focus", Icon: Brain },
+const items: { key: "speed" | "confidence" | "safe" | "focus"; Icon: LucideIcon; value: string; icon: string }[] = [
+  { key: "speed", Icon: Gauge, value: "text-gradient", icon: "text-primary" },
+  { key: "confidence", Icon: TrendingUp, value: "text-gradient-immersive", icon: "text-teal-soft" },
+  { key: "safe", Icon: ShieldCheck, value: "text-gradient", icon: "text-secondary-soft" },
+  { key: "focus", Icon: Brain, value: "text-gradient-gaming", icon: "text-orange" },
 ];
 
 export function WhyImmersive() {
@@ -18,33 +18,30 @@ export function WhyImmersive() {
     <section
       id="why"
       aria-labelledby="why-title"
-      className="relative isolate overflow-hidden bg-navy-900 py-20 text-white sm:py-28"
+      className="relative isolate overflow-hidden bg-gradient-dark py-24 sm:py-32"
     >
-      <div aria-hidden="true" className="bg-grid absolute inset-0 -z-10 opacity-60" />
-      <div aria-hidden="true" className="absolute top-1/2 start-1/2 -z-10 h-[30rem] w-[30rem] -translate-1/2 rounded-full bg-teal-500/10 blur-3xl" />
+      <div aria-hidden="true" className="bg-grid absolute inset-0 -z-10 opacity-70" />
+      <div
+        aria-hidden="true"
+        className="absolute top-1/2 start-1/2 -z-10 h-[32rem] w-[32rem] -translate-1/2 rounded-full bg-secondary/15 blur-[120px]"
+      />
       <Container>
-        <SectionHeading
-          id="why-title"
-          tone="light"
-          eyebrow={t("eyebrow")}
-          title={t("title")}
-          subtitle={t("subtitle")}
-        />
-        <ul className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {items.map(({ key, Icon }, i) => (
+        <SectionHeading id="why-title" eyebrow={t("eyebrow")} title={t("title")} subtitle={t("subtitle")} />
+        <ul className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {items.map(({ key, Icon, value, icon }, i) => (
             <Reveal as="li" key={key} delay={i * 0.08} className="h-full">
-              <div className="flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur-sm transition hover:border-teal-400/40">
-                <Icon className="h-6 w-6 text-teal-400" aria-hidden="true" />
-                <p className="mt-4 text-4xl font-bold tracking-tight text-gradient sm:text-5xl" dir="ltr">
+              <div className="flex h-full flex-col rounded-[var(--radius-card)] border border-border bg-surface/50 p-7 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/50">
+                <Icon className={`h-6 w-6 ${icon}`} aria-hidden="true" />
+                <p className={`mt-5 font-heading text-5xl font-extrabold tracking-tight ${value}`} dir="ltr">
                   {t(`items.${key}.value`)}
                 </p>
-                <h3 className="mt-2 font-semibold text-white">{t(`items.${key}.label`)}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-white/70">{t(`items.${key}.description`)}</p>
+                <h3 className="mt-3 text-lg font-bold text-white">{t(`items.${key}.label`)}</h3>
+                <p className="mt-2 text-sm text-text-muted">{t(`items.${key}.description`)}</p>
               </div>
             </Reveal>
           ))}
         </ul>
-        <p className="mx-auto mt-10 max-w-3xl text-center text-xs leading-relaxed text-white/50">{t("note")}</p>
+        <p className="mx-auto mt-10 max-w-3xl text-center text-xs text-text-muted">{t("note")}</p>
       </Container>
     </section>
   );

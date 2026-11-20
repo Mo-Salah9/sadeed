@@ -1,24 +1,21 @@
 {
   "meta": {
-    "siteName": "Sadeed Studio",
-    "title": "Sadeed Studio: Immersive Learning",
-    "description": "Sadeed Studio is an Amman-based studio building VR experiences, XR/AR learning apps, educational games and training simulations for schools, universities, government and enterprise.",
-    "ogAlt": "Sadeed Studio: Immersive Learning",
-    "contactTitle": "Contact Us | Sadeed Studio",
-    "contactDescription": "Talk to Sadeed Studio about VR, XR/AR, educational games or training simulations for your institution. Request a demo today."
+    "siteName": "SADEED",
+    "title": "SADEED | Interactive E-Learning Solutions",
+    "description": "SADEED builds virtual reality experiences, augmented reality solutions and educational games that transform how schools, universities and organizations teach and train.",
+    "ogAlt": "SADEED: Interactive E-Learning Solutions",
+    "contactTitle": "Contact Us | SADEED",
+    "contactDescription": "Partner with SADEED on VR, AR and educational game projects for your school, university or organization. Request a demo today."
   },
   "nav": {
     "skipToContent": "Skip to main content",
-    "home": "Sadeed Studio home",
+    "logoLabel": "SADEED home",
     "primary": "Primary navigation",
-    "about": "About",
-    "services": "Services",
-    "why": "Why Immersive",
-    "process": "Process",
-    "portfolio": "Portfolio",
-    "sectors": "Sectors",
-    "contact": "Contact",
-    "contactUs": "Contact Us",
+    "home": "Home",
+    "about": "About Us",
+    "solutions": "Solutions",
+    "portfolio": "Projects",
+    "contact": "Contact Us",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
     "switchLanguage": "التبديل إلى العربية",
@@ -26,53 +23,52 @@
     "otherLanguageShort": "AR"
   },
   "hero": {
-    "eyebrow": "VR · XR · Educational Games",
-    "titleStart": "Learning you can",
-    "titleHighlight": "step inside",
-    "tagline": "Sadeed Studio: Immersive Learning",
-    "description": "We design and build immersive educational experiences that help students understand faster, trainees practise safely, and institutions measure real progress.",
-    "ctaServices": "Our Services",
-    "ctaDemo": "Request a Demo",
-    "trust": "Built for schools, universities and training centres across Jordan and the region",
-    "visualAlt": "Abstract low-poly illustration of a VR headset"
+    "eyebrow": "AR · VR · Educational Games",
+    "titleStart": "Transforming education through",
+    "titleHighlight": "interactive technology",
+    "tagline": "Interactive E-Learning Solutions",
+    "description": "We design immersive VR experiences, AR learning tools and educational games that help learners understand more, remember longer and practise safely.",
+    "ctaPrimary": "Explore Our Solutions",
+    "ctaSecondary": "View Our Work",
+    "chips": {
+      "vr": "Virtual Reality",
+      "ar": "Augmented Reality",
+      "games": "Educational Games"
+    },
+    "visualAlt": "3D illustration of a faceted crystal orbited by rings and colorful pixel cubes"
   },
-  "about": {
-    "eyebrow": "Who we are",
-    "title": "An immersive learning studio from Amman",
-    "body1": "Sadeed Studio is a team of educators, 3D artists and Unity engineers based in Amman, Jordan. We turn curricula, procedures and complex concepts into interactive experiences that learners can see, touch and explore.",
-    "body2": "We work closely with teachers, subject-matter experts and decision-makers, so every experience is pedagogically sound, culturally relevant, fully bilingual and built to run on the hardware you already have.",
-    "missionTitle": "Our mission",
-    "mission": "To make high-quality immersive learning accessible to every classroom and training centre in the Arab world.",
-    "visionTitle": "Our approach",
-    "vision": "Learning outcomes first, technology second. We measure success by what learners can do afterwards.",
-    "locationLabel": "Based in",
-    "location": "Amman, Jordan",
-    "highlights": {
-      "bilingual": "Arabic & English by default",
-      "curriculum": "Curriculum-aligned content",
-      "devices": "Runs on headsets, tablets & web"
-    }
-  },
-  "services": {
-    "eyebrow": "What we do",
-    "title": "Services",
-    "subtitle": "End-to-end immersive solutions, from the first idea to deployment in your classrooms and training rooms.",
+  "solutions": {
+    "eyebrow": "Our solutions",
+    "title": "Immersive learning, built for real classrooms",
+    "subtitle": "Three ways we bring lessons to life, all designed with educators, delivered in Arabic and English, and built to run on the devices you already have.",
+    "learnMore": "Discuss this solution",
     "items": {
       "vr": {
-        "title": "VR Educational Experiences",
-        "description": "Fully immersive virtual labs, field trips and lessons for standalone headsets like Meta Quest and Pico."
+        "title": "Virtual Reality Experiences",
+        "description": "Step inside the lesson with virtual labs, field trips and training simulations for standalone headsets.",
+        "features": {
+          "one": "Virtual labs & classrooms",
+          "two": "Medical, technical & safety simulations",
+          "three": "Meta Quest, Pico & PC VR"
+        }
       },
-      "xr": {
-        "title": "XR / AR Learning Apps",
-        "description": "Augmented reality apps that bring textbooks, models and equipment to life on phones and tablets."
+      "ar": {
+        "title": "Augmented Reality Solutions",
+        "description": "Bring textbooks, models and equipment to life on phones and tablets with interactive 3D overlays.",
+        "features": {
+          "one": "Interactive scientific models",
+          "two": "AR-enabled textbooks & posters",
+          "three": "iOS, Android & WebAR"
+        }
       },
       "games": {
-        "title": "Educational Games",
-        "description": "Game-based learning for web and mobile that turns practice into play, with progress tracking built in."
-      },
-      "simulations": {
-        "title": "Training Simulations",
-        "description": "Realistic medical, technical and safety simulations so trainees can practise high-risk procedures without the risk."
+        "title": "Educational Games & Interactive Learning",
+        "description": "Game-based learning that turns practice into play, with challenges, rewards and progress tracking.",
+        "features": {
+          "one": "Curriculum-aligned challenges",
+          "two": "Gamified assessments",
+          "three": "Teacher dashboards & analytics"
+        }
       }
     }
   },
@@ -81,12 +77,12 @@
     "title": "Learning by doing, not just watching",
     "subtitle": "Immersive learning puts students inside the lesson. That changes how much they remember and how ready they feel.",
     "items": {
-      "retention": {
+      "speed": {
         "value": "4×",
         "label": "Faster to train",
         "description": "Learners complete hands-on modules faster than with classroom instruction alone."
       },
-      "engagement": {
+      "confidence": {
         "value": "+275%",
         "label": "More confident",
         "description": "Learners feel more confident applying what they practised in a realistic environment."
@@ -104,10 +100,23 @@
     },
     "note": "Figures from PwC, \"The Effectiveness of Virtual Reality Soft Skills Training in the Enterprise\" (2020), compared with classroom learners. Results vary by context and program design."
   },
+  "portfolio": {
+    "eyebrow": "Our work",
+    "title": "Projects that make learning stick",
+    "subtitle": "A selection of experiences we have designed and built for learners of all ages.",
+    "all": "All",
+    "filterLabel": "Filter projects by technology",
+    "categories": {
+      "vr": "VR",
+      "ar": "AR",
+      "game": "Game",
+      "simulation": "Simulation"
+    }
+  },
   "process": {
     "eyebrow": "How we work",
-    "title": "Our process",
-    "subtitle": "A clear, collaborative path from idea to impact.",
+    "title": "From idea to impact",
+    "subtitle": "A clear, collaborative process with your educators at every step.",
     "steps": {
       "discover": {
         "title": "Discover",
@@ -115,7 +124,7 @@
       },
       "design": {
         "title": "Design",
-        "description": "Storyboards, interaction design and prototypes, reviewed with you before a single line of production code."
+        "description": "Storyboards, interaction design and prototypes, reviewed with you before production starts."
       },
       "develop": {
         "title": "Develop (Unity)",
@@ -127,23 +136,26 @@
       }
     }
   },
-  "portfolio": {
-    "eyebrow": "Selected work",
-    "title": "Portfolio",
-    "subtitle": "A sample of experiences we have designed and built for learners of all ages.",
-    "all": "All",
-    "filterLabel": "Filter projects by category",
-    "categories": {
-      "vr": "VR",
-      "ar": "AR",
-      "game": "Game",
-      "simulation": "Simulation"
+  "about": {
+    "eyebrow": "About SADEED",
+    "title": "Our mission is to transform how the Arab world learns",
+    "body1": "SADEED is a team of educators, 3D artists and Unity engineers based in Amman, Jordan. We turn curricula, procedures and complex concepts into interactive experiences that learners can see, touch and explore.",
+    "body2": "We work closely with teachers, subject-matter experts and decision-makers, so every experience is pedagogically sound, culturally relevant and fully bilingual.",
+    "missionTitle": "Mission",
+    "mission": "Make high-quality immersive learning accessible to every classroom and training centre in the Arab world.",
+    "approachTitle": "Approach",
+    "approach": "Learning outcomes first, technology second. We measure success by what learners can do afterwards.",
+    "locationLabel": "Based in",
+    "location": "Amman, Jordan",
+    "highlights": {
+      "bilingual": "Arabic & English by default",
+      "curriculum": "Curriculum-aligned content",
+      "devices": "Headsets, tablets & web"
     }
   },
   "sectors": {
-    "eyebrow": "Who we serve",
-    "title": "Sectors we serve",
-    "subtitle": "We tailor every experience to the goals, budgets and procurement needs of each sector.",
+    "eyebrow": "Who we work with",
+    "title": "Built for institutions that shape learners",
     "items": {
       "schools": {
         "title": "Schools",
@@ -158,15 +170,15 @@
         "description": "National-scale education and awareness programs for ministries and public bodies."
       },
       "corporate": {
-        "title": "Corporate Training",
+        "title": "Businesses",
         "description": "Onboarding, safety and technical skills training that scales across teams."
       }
     }
   },
   "contact": {
-    "eyebrow": "Get in touch",
-    "title": "Let's build something learners remember",
-    "subtitle": "Tell us about your project or request a live demo. We usually reply within one business day.",
+    "eyebrow": "Let's collaborate",
+    "title": "Bring interactive learning to your institution",
+    "subtitle": "Schools, universities and businesses: tell us about your goals or request a live demo. We usually reply within one business day.",
     "form": {
       "name": "Full name",
       "namePlaceholder": "e.g. Lina Haddad",
@@ -174,13 +186,12 @@
       "emailPlaceholder": "you@organization.com",
       "organization": "Organization",
       "organizationPlaceholder": "School, university or company",
-      "service": "Service of interest",
-      "servicePlaceholder": "Select a service",
+      "service": "Solution of interest",
+      "servicePlaceholder": "Select a solution",
       "services": {
-        "vr": "VR Educational Experiences",
-        "xr": "XR / AR Learning Apps",
-        "games": "Educational Games",
-        "simulations": "Training Simulations",
+        "vr": "Virtual Reality Experiences",
+        "ar": "Augmented Reality Solutions",
+        "games": "Educational Games & Interactive Learning",
         "demo": "Request a demo",
         "other": "Something else"
       },
@@ -199,7 +210,7 @@
       "nameTooLong": "Name is too long.",
       "emailInvalid": "Please enter a valid email address.",
       "organizationTooLong": "Organization name is too long.",
-      "serviceRequired": "Please select a service.",
+      "serviceRequired": "Please select a solution.",
       "messageTooShort": "Please write at least 10 characters.",
       "messageTooLong": "Message is too long (max 3000 characters)."
     },
@@ -213,11 +224,11 @@
     }
   },
   "footer": {
-    "tagline": "Immersive learning experiences designed and built in Amman, Jordan.",
+    "tagline": "Interactive e-learning solutions: VR, AR and educational games, designed and built in Amman, Jordan.",
     "explore": "Explore",
-    "services": "Services",
+    "solutions": "Solutions",
     "contact": "Contact",
-    "rights": "© {year} Sadeed Studio. All rights reserved.",
+    "rights": "© {year} SADEED. All rights reserved.",
     "backToTop": "Back to top"
   },
   "notFound": {

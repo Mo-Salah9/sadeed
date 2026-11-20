@@ -24,7 +24,7 @@ export default function ContactPage({ params }: { params: Promise<{ locale: Loca
   setRequestLocale(locale);
 
   return (
-    <div className="bg-navy-900 pt-16 lg:pt-18">
+    <div className="bg-bg pt-18">
       <Contact headingLevel="h1" />
     </div>
   );

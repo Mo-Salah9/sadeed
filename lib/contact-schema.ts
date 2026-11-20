@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const serviceOptions = ["vr", "xr", "games", "simulations", "demo", "other"] as const;
+export const serviceOptions = ["vr", "ar", "games", "demo", "other"] as const;
 export type ServiceOption = (typeof serviceOptions)[number];
 
 /**

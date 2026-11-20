@@ -6,7 +6,7 @@ import { Hero } from "@/components/sections/Hero";
 import { Portfolio } from "@/components/sections/Portfolio";
 import { Process } from "@/components/sections/Process";
 import { Sectors } from "@/components/sections/Sectors";
-import { Services } from "@/components/sections/Services";
+import { Solutions } from "@/components/sections/Solutions";
 import { WhyImmersive } from "@/components/sections/WhyImmersive";
 import { OrganizationJsonLd } from "@/components/ui/JsonLd";
 import type { Locale } from "@/i18n/routing";
@@ -19,11 +19,11 @@ export default function HomePage({ params }: { params: Promise<{ locale: Locale 
     <>
       <OrganizationJsonLd locale={locale} />
       <Hero />
-      <About />
-      <Services />
+      <Solutions />
       <WhyImmersive />
-      <Process />
       <Portfolio />
+      <Process />
+      <About />
       <Sectors />
       <Contact />
     </>
