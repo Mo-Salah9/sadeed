@@ -35,17 +35,25 @@ export function HeroVisual({ alt }: { alt: string }) {
 
   useEffect(() => {
     if (!canRender3D()) return;
-    // Wait until the browser is idle so the 3D bundle never competes with first paint
+    // Start only after the page has fully loaded and the browser is idle,
+    // so the 3D bundle and shader compilation never compete with the first paint.
     const w = window as Window & {
       requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number;
       cancelIdleCallback?: (id: number) => void;
     };
-    if (w.requestIdleCallback) {
-      const id = w.requestIdleCallback(() => setEnable3D(true), { timeout: 2500 });
-      return () => w.cancelIdleCallback?.(id);
-    }
-    const id = window.setTimeout(() => setEnable3D(true), 1200);
-    return () => window.clearTimeout(id);
+    let idleId: number | undefined;
+    let timeoutId: number | undefined;
+    const start = () => {
+      if (w.requestIdleCallback) idleId = w.requestIdleCallback(() => setEnable3D(true), { timeout: 3000 });
+      else timeoutId = window.setTimeout(() => setEnable3D(true), 1500);
+    };
+    if (document.readyState === "complete") start();
+    else window.addEventListener("load", start, { once: true });
+    return () => {
+      window.removeEventListener("load", start);
+      if (idleId !== undefined) w.cancelIdleCallback?.(idleId);
+      if (timeoutId !== undefined) window.clearTimeout(timeoutId);
+    };
   }, []);
 
   return (
