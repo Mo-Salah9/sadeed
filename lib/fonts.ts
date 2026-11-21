@@ -28,7 +28,7 @@ export const tajawal = Tajawal({
   subsets: ["arabic"],
   weight: ["700", "800"],
   variable: "--font-tajawal",
-  display: "optional",
+  display: "swap",
 });
 
 export const fontVariables = [inter.variable, poppins.variable, cairo.variable, tajawal.variable].join(" ");

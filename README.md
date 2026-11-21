@@ -138,7 +138,7 @@ public/brand/               Logo symbol · public/og/ Open Graph images · publi
   - The scroll reveal (`Reveal.tsx`) is progressive enhancement. Content is visible in the server HTML and only hidden by JavaScript if it's below the fold.
   - The hero background glows drift slowly.
   - All motion is disabled under `prefers-reduced-motion`.
-- **Fonts:** the Arabic fonts use `display: optional`. The fallback system fonts have very different metrics, and swapping late would shift the page layout.
+- **Fonts:** the Arabic heading font (Tajawal) uses `display: swap`, so headings always show in the brand font. The Arabic body font (Cairo) uses `display: optional`, because its fallback metrics differ enough that a late swap would shift the layout. Arabic text never gets letter-spacing (see `:lang(ar)` in `globals.css`), because spacing breaks the joins between Arabic letters.
 - **Contact form:** the same Zod schema runs in the browser and on the server. A honeypot field catches bots, and there's an in-memory rate limit of 5 requests per 10 minutes per IP. `?service=vr|ar|games|demo` pre-selects the dropdown; the Solutions cards use this.
 - **SEO:** per-locale title and description, canonical URL, hreflang + `x-default`, Open Graph and Twitter cards, `sitemap.xml`, `robots.txt`, and Organization JSON-LD.
 - **Accessibility:** skip link, landmarks, one `h1` per page, labelled fields with `aria-invalid` and `aria-describedby`, a live status region, a keyboard-operable menu (Esc closes it), visible focus rings, and WCAG AA contrast.

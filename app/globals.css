@@ -209,3 +209,11 @@ section[id] {
   opacity: 0;
   transform: translateY(24px);
 }
+
+/* ---------- Arabic: never letter-space ----------
+   Arabic letters are cursive and must join; any letter-spacing (e.g. tracking-tight,
+   tracking-wider) breaks the joins. Elements marked lang="en" (e.g. the SADEED wordmark)
+   keep their spacing. */
+:lang(ar) {
+  letter-spacing: normal !important;
+}

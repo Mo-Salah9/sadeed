@@ -35,7 +35,7 @@ export function LogoSymbol({ size = 40, priority = false, className = "" }: Omit
 
 export function Logo({ wordmark = true, size = 40, priority = false, className = "" }: LogoProps) {
   return (
-    <span className={`inline-flex items-center gap-2 ${className}`} dir="ltr">
+    <span className={`inline-flex items-center gap-2 ${className}`} dir="ltr" lang="en">
       <LogoSymbol size={size} priority={priority} />
       {wordmark && (
         <span
